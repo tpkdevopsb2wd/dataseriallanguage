@@ -1,0 +1,21 @@
+database : &common
+   host : db.example.net
+   port : 3306
+   name : mydb
+   password : mypassword
+   user : tpk
+   enabled : true
+   legacy : yes
+
+pord_database : 
+   <<: *common
+   host : prod.example.net
+   name : pord_database
+   password : prod_password
+
+dev_database :
+   <<: *common
+   host : localhost
+   name : dev_database
+   password : toor
+
